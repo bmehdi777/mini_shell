@@ -5,5 +5,6 @@ mod parser;
 
 fn main() {
     //repl::start_lexing();
-    repl::start_parsing();
+    //repl::start_parsing();
+    repl::start();
 }
