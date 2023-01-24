@@ -57,6 +57,10 @@ pub fn start() {
         let mut commands_parsed: Vec<Vec<String>> = parser.parse_command();
 
         for command in commands_parsed.iter_mut() {
+            match command[0].as_str() {
+                "exit()" => { return; },
+                _ => {}
+            }
             let bin: String = command.remove(0);
             exec::exec_program(bin.as_str(), command);
         }
